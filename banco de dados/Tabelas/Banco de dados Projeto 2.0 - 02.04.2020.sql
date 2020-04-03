@@ -65,6 +65,8 @@ insert into EnderecoLix values
 
 create table statusLixeira (
 idStatus int primary key,
+EntradaLixeira int,
+Unidade_Armazenadas int,
 Nivel_de_preenchimento int,
 Estado_da_lixeira varchar(15),
 Dia_e_hora datetime
@@ -73,19 +75,19 @@ Dia_e_hora datetime
 alter table statusLixeira modify Dia_e_hora varchar(20);
 
 insert into statusLixeira values
-(2000, 2, 'Médio', '2020/16/03 20:10'), 
-(2001, 1, 'Vazio', '2020/12/03 17:40'),
-(2002, 2, 'Médio', '2020/19/03 10:15'),
-(2003, 3, 'Cheio', '2020/21/03 09:20'),
-(2004, 1, 'Vazio', '2020/13/03 05:00'),
-(2005, 1, 'Vazio', '2020/11/03 15:10'),
-(2006, 3, 'Cheio', '2020/18/03 14:00'),
-(2007, 2, 'Médio', '2020/13/03 11:20'),
-(2008, 3, 'Cheio', '2020/20/03 16:30'),
-(2009, 1, 'Vazio', '2020/19/03 16:00'),
-(2010, 3, 'Cheio', '2020/22/03 13:00'),
-(2011, 3, 'Cheio', '2020/21/03 15:40'),
-(2012, 2, 'Médio', '2020/10/03 18:20');
+(2000, 1, 10 ,2, 'Médio', '2020/16/03 20:10'), 
+(2001, 1, 4, 1, 'Vazio', '2020/12/03 17:40'),
+(2002, 1, 9, 2, 'Médio', '2020/19/03 10:15'),
+(2003, 1, 17, 3, 'Cheio', '2020/21/03 09:20'),
+(2004, 1, 5, 1, 'Vazio', '2020/13/03 05:00'),
+(2005, 1, 5, 1, 'Vazio', '2020/11/03 15:10'),
+(2006, 1, 24, 3, 'Cheio', '2020/18/03 14:00'),
+(2007, 1, 12, 2, 'Médio', '2020/13/03 11:20'),
+(2008, 1, 19, 3, 'Cheio', '2020/20/03 16:30'),
+(2009, 1, 3, 1, 'Vazio', '2020/19/03 16:00'),
+(2010, 1, 21, 3, 'Cheio', '2020/22/03 13:00'),
+(2011, 1, 21, 3, 'Cheio', '2020/21/03 15:40'),
+(2012, 1, 13, 2, 'Médio', '2020/10/03 18:20');
 
 
 create table tbLixeira (
@@ -127,4 +129,3 @@ select * from funcionarios;
 select * from funcionarios, clientes where fkClientes2 = idClientes;
 
 select * from tbLixeira, statusLixeira, EnderecoLix, clientes where idStatus = fkStatus and idEndereco = fkEndereco and idClientes = fkClientes;
-
