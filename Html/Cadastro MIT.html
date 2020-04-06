@@ -55,7 +55,7 @@
     <p><b style="float: left; width: 10%;">Digite uma senha: </b><input type="password" size="23" id="senha"></p>
     <p><button onclick="cadastrar()" style="float: low;" >Cadastar</button></p>
     <div id="cadastro_completo" style="display: block;"></div>
-    <div style="width: 80%; height: 250px; float: left;"></div> <img style="width: 250px; height: 250px;" src="MIT.png">
+    <span style="width: 80%; height: 250px; float: left;"></span> <img style="width: 250px; height: 250px;" src="MIT.png">
     
     
 </body>
@@ -83,14 +83,15 @@ function cadastrar(){
     }
 
     if (senha.value==""){
-    alert("Insira uma senha");
+    alert("Insira uma senha"); 
 
-    }else{
-    cadastro_completo.style.display.none.innerHTML = `Ola ${nome.value}, seja bem vindo. Estaremos lhe atendendo com prazer no estado de 
+    } else{cadastro_completo.innerHTML= `<center><h3 style="text-align: center;  width: 70%;  border-radius: 
+    10px; background-color: rgb(177, 177, 255)">Ola ${nome.value}, seja bem vindo a <span style="color: green;">MIT</span>. Estaremos lhe atendendo com prazer no estado de 
     ${estado.value} temos o copromisso de fazer o seu lixo virar lucro. Gostariamos de te lembar que a partir de agora para acessar
-    seus dados seu usuario é: ${login.value} e a senha é a mesma digitada anteriormente, estaremos sempre enviando informações para 
-    seu e-mail: ${email.value}`; 
-    }   
+    seus dados em nossa plataforma seu usuario é: ${login.value}, a senha é a mesma digitada anteriormente, estaremos sempre 
+    enviando informações para seu e-mail: ${email.value}</h3></center>`; 
+    }
+    //Gostaria que quando o else entrasse em ação tudo que esta block na div cadastro_completo ficasse none.
 }
    
 </script>
