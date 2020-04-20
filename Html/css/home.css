@@ -61,7 +61,7 @@ nav ul {
     flex-direction: inherit;
     align-items: center;
     width: 100%;
-    font-size: 14px;
+    font-size: 59%;
     margin: auto;
     
 }
@@ -69,6 +69,7 @@ nav ul {
 nav ul li {
     width: 100%;
     text-align: center;
+    margin: 5px;
     
 }
 
@@ -132,9 +133,11 @@ FIM SOBRE
  SERVIÇOS
 */
 
+
 h2  {
     text-align: center;
     margin: 10px;
+    color: #191970;
   
 }
 /*
@@ -151,7 +154,7 @@ FIM SERVIÇOS
     align-items: center;
     text-align: center;
     padding: 20px;
-}
+    }
 
 /*
 FIM CONTATO
