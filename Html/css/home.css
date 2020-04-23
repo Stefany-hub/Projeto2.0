@@ -135,7 +135,7 @@ FIM SOBRE
 */
 
 /*
- SERVIÇOS
+ PRODUTO
 */
 
 
@@ -145,8 +145,13 @@ h2  {
     color: #191970;
   
 }
+.produto {
+    text-align: center;
+    margin: 40px 90px;
+    color: #191970; 
+}
 /*
-FIM SERVIÇOS
+FIM PRODUTO
 */
 
 /*
