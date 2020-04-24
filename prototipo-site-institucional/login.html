@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Login</title>
+      <link rel="stylesheet" href="css/style-login.css">
+
+  </head>
+  <body>
+      <div class="card">
+      <form class="box" action="contact.html">
+<h1> LOGIN </h1>
+<input type="email" id="nome" required  placeholder="Username" > 
+<input type="password" id="senha" required  placeholder="password">
+<!-- botão para o dashboard-->
+<button onclick="login()" type="submit"value="Login">Login</button> 
+  <h3> <a href="Cadastro MIT.html"> Cadastre-se</a></h3> 
+      </form>   
+
+</div>
+  </body>
+  </html> 
+  <script>
+function login(){
+  if (nome.value == 'gabriel.pinheiro@bandtec.com.br' && senha.value == 'gabriel'){
+    window.location.href="contact.html"} 
+  // } else if (nome.value == '' && senha.value == ''){
+  //   alert('Preencha os campos corretamente')
+  // } else 
+}
+
+  </script>
