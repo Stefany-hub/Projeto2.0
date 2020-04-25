@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro MIT</title>
+    <link rel="stylesheet" href="cadastro.css">
+
+</head>
+<body > 
+    <header>
+
+         
+   </header>
+            
+   <for m class="box" action="Cadastro.html"  method="POST" >
+
+    <h1>  Cadastro </h1>
+    Nome da empresa: <input size="10" id="nome" type="text"  name=""  placeholder="Nome da empresa"   >
+    CNPJ da empresa: <input size="10" id="cnpj" type="password"  name=""  placeholder="CNPJ da empresa"   >
+    E-mail da empresa:<input size="10" id="email" type="password"  name=""  placeholder=" E-mail da empresa"   >
+   
+    
+    Estado: 
+        <select  id="estado">
+            <option value="et">Estado</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AM">AM</option>
+            <option value="AP">AP</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MG">MG</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="PR">PR</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="RS">RS</option>
+            <option value="SC">SC</option>  
+            <option value="SE">SE</option>
+            <option value="SP">SP</option>
+            <option value="TO">TO</option>
+        </select></p>
+       <button onclick="cadastrar()" type="submit"  name=""  value="Login">Cadastre</button> 
+
+          </form>   
+    
+<div id="cadastro_completo" style="display: block;"></div>
+</body>
+</html>
+<script>
+
+function cadastrar(){
+    if (nome.value==""){
+    alert ("Por favor digite o nome da empresa");
+    }
+
+    if (email.value=="") {
+    alert ("Por favor digite um e-mail da empresa");
+    
+    }
+
+    if (estado.value==""){
+    alert("Por favor selecione o estado da empresa");
+    
+    }
+
+    if (login.value==""){
+    alert("Insira um login Ex: Nome.empresa");
+
+    }
+
+    if (senha.value==""){
+    alert("Insira uma senha"); 
+
+    } else{cadastro_completo.innerHTML= `<center><h3 style="text-align: center;  width: 70%;  border-radius: 
+    10px; background-color: rgb(177, 177, 255)">Ola ${nome.value}, seja bem vindo a <span style="color: green;">MIT</span>. Estaremos lhe atendendo com prazer no estado de 
+    ${estado.value} temos o copromisso de fazer o seu lixo virar lucro. Gostariamos de te lembar que a partir de agora para acessar
+    seus dados em nossa plataforma seu usuario é: ${login.value}, a senha é a mesma digitada anteriormente, estaremos sempre 
+    enviando informações para seu e-mail: ${email.value}</h3></center>`; 
+    }
+    //Gostaria que quando o else entrasse em ação tudo que esta block na div cadastro_completo ficasse none.
+}
+   
+</script>
