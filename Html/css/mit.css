@@ -117,6 +117,7 @@ header {
     text-align: center;
     padding: 0 20px 20px;
     background-color: #191970;
+    
 }
 
 #sobre p {
@@ -125,12 +126,16 @@ header {
 
 }
 
+#sobre h2 {
+    color: #ffff;
+}
+
 /*
 FIM SOBRE
 */
 
 /*
- SERVIÇOS
+ PRODUTO
 */
 
 
@@ -140,8 +145,13 @@ h2  {
     color: #191970;
   
 }
+.produto {
+    text-align: center;
+    margin: 40px 90px;
+    color: #191970; 
+}
 /*
-FIM SERVIÇOS
+FIM PRODUTO
 */
 
 /*
@@ -158,6 +168,22 @@ FIM SERVIÇOS
 
 /*
 FIM CONTATO
+*/
+
+/*
+CALCULADORA
+*/
+#calculo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #191970; 
+    margin: 1%;
+}
+
+/*
+FIM CALCULADORA
 */
 
 /*
