@@ -211,14 +211,13 @@ footer{
     margin: 0;
     padding: 0;
     border: 0;
-    /* margin-top: 20px; */
   /* largura*/  width: 100%;
     background-color: #E6E6FA;
    /* altura*/ height: 80px;
     text-align: center;
 }
 footer div{
-  /* para que ficasse embaixo*/   padding: 20px;
+  /* para que ficasse embaixo*/   padding: 35px;
 }
  /* @media transição de tamanho para que ele seja lido em outras plataformas*/
 @media (max-width: 700px){
