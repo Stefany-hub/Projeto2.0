@@ -18,7 +18,7 @@
     <input size="10" id="nome" type="text" required name=""  placeholder="Nome da empresa"   >
     <input size="10" id="cnpj" type="number" required name=""  placeholder="CNPJ da empresa"   >
     <input size="10" id="email" type="email" required name=""  placeholder=" E-mail da empresa"   >
-    <input size="10" id="estado" type="text" required name=""  placeholder="Estado"   >
+    <input size="10" id="estado" type="password" required name=""  placeholder="Senha">
  
        <button onclick="cadastrar()" type="submit"  name=""  value="Login">Cadastre</button> 
        
@@ -30,7 +30,7 @@
 function cadastrar(){
     if (nome.value != '' && cnpj.value != '' && email.value != '' && estado.value != '' ){
         formulario.innerHTML = `<div class = "formCompleto"><span class="texto">Bem vindo a <span class = "mit">MIT</span>!</span><br><br>
-            <p><a href="contact.html">Acesse nosso site</a></p></div>
+            <p><a href="login.html">Conecte-se agora</a></p></div>
         <div class="logo"><img src="img/MIT.png" alt=""></div>`
     }
 }
