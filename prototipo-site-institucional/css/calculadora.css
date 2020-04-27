@@ -1,0 +1,90 @@
+/* tudo  */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+.imgFundo{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-attachment: fixed; 
+}
+/* corpo  */
+body{
+    color:black;
+    font-family: sans-serif;
+}
+
+/* tag coloca direto, vh se ajusta a altura do navegador, deixar ser responsivo*/
+section{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+/* cabeçalho */
+header{
+    background-color:	#E6E6FA;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+  /* ele define que os elementos não fique encima da barra de menu */ 
+   z-index: 100;
+}
+
+.box-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* define o espaço entre os itens*/
+}
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+nav{
+    margin: 30px 0;
+}
+nav a{
+    text-decoration: none;
+    padding: 10px;
+    height: 50px;
+    color: black;
+}
+nav a:hover{
+    color: #7B68EE;
+
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+.imagemenu{
+height: 70px;
+float: left;
+
+}
+/* Aqui acaba o header */
+
+.imgText div{
+    text-align: center;
+    padding-top: 100px;
+}
+/*rodapé*/
+footer{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  /* largura*/  width: 100%;
+    background-color: #E6E6FA;
+   /* altura*/ height: 80px;
+    text-align: center;
+}
+footer div{
+  /* para que ficasse embaixo*/   padding: 35px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculadora.css">
+    <title>Calculadora Financeira</title>
+</head>
+
+<body>
+    <header>
+        <!--cabeçalho de caixa de recipiente-->
+        <div class="container box-header">
+            <div class="titulo">
+                <img class="imagemenu" src="img/MIT.png" alt="">
+            </div>
+
+            <!-- a tag nav ele agrupa elementos de links para outras paginas -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="contact.html">INICIO</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="file:///E:/Pesquisa%20e%20Inova%C3%A7%C3%A3o/Projeto2.0/prototipo-site-institucional/contact.html#produto">PRODUTO</a></li>
+                    <li><a href="calculadora.html">CALCULADORA FINANCEIRA</a></li>
+                    <li><a href="file:///E:/Pesquisa%20e%20Inova%C3%A7%C3%A3o/Projeto2.0/prototipo-site-institucional/contact.html#portfolio">PORTFOLIO</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="file:///E:/Pesquisa%20e%20Inova%C3%A7%C3%A3o/Projeto2.0/prototipo-site-institucional/contact.html#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+     </header>
+
+     <!--tag section para colocar texto e img -->
+    <section class="imgText">
+        <img class="imgFundo" src="img/fundoo.JPEG " alt="">
+        <div>
+        <h1>CALCULADORA FINANCEIRA</h1>
+        <h3>Valor fixo de R$290,00 por mês</h3>
+    
+        Quantos meses pretende contratar?<input type="number" id="mes_contratado"> 
+        <button id="calcular" onclick="calcular_valores()">Calcular</button>
+        <br>
+        </div>
+        <div id="div_mensagem"></div>
+        
+    </section>
+    <!--rodapé-->
+    <footer>
+        <div>
+            <p>Projeto MIT, Copyright &copy; 2020</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    function calcular_valores(){
+        
+        var desconto = `${(Number(290) * Number(mes_contratado.value) * Number(0.7))/100}`
+        var total = `${Number(290) * Number(mes_contratado.value)}`
+    
+        div_mensagem.innerHTML = `Valor de <b>desconto</b> de <b>R$${desconto}</b>. O valor total fica em <b>R$${total - desconto}</b>. <br>Se fechar conosco um pacote de <b>12 meses</b> conseguimos dar um <b>desconto</b> de <b>10%</b> do valor total que ficaria em <b>R$3.132,00</b>. <br> <br> Caso tenha alguma sugestão ou proposta, nos envie um e-mail: <b>ajuda.mit@gmail.com</b>`
+    }
+    
+    
+</script>

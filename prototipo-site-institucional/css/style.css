@@ -238,4 +238,16 @@ footer div{
         height: auto;
     }
 }
+#contato {
+    text-align: center;
+    background-color: #e1e1e0;
+}
+#contato a{
+    text-decoration: none;
+    color: #264cad
+}
+.contato{
+    padding-top: 80px;
+}
+
     
