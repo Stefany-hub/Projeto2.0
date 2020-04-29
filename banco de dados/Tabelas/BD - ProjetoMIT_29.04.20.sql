@@ -59,13 +59,109 @@ insert into EnderecoLix values
 (1007, 'Parque Villa Lobos', 'Alto de Pinheiros', 'São Paulo', 'SP');
 
 
-create table sensorEntrada(
-idEntrada varchar(20) primary key,
+
+
+
+
+
+create table tbLixeira (
+idLixeira int primary key,
+Tipo_da_lixeira varchar(20),
+fkEndereco int,
+foreign key (fkEndereco) references EnderecoLix (idEndereco),
+fkClientes int,
+foreign key (fkClientes) references clientes (idClientes)
+);
+
+
+insert into tbLixeira values 
+(500, 'Papel', 1000, 0101),
+(501, 'Plástico', 1001, 0102),
+(502, 'Orgânico', 1002, 0103),
+(503, 'Vidro', 1003, 0103),
+(504, 'Papel', 1004, 0104),
+(505, 'Plástico', 1002, 0101),
+(506, 'Metal', 1003, 0102),
+(507, 'Papel', 1004, 0104),
+(508, 'Orgânico', 1005, 0103),
+(509, 'Plástico', 1006, 0105),
+(510, 'Metal', 1007, 0106),
+(511, 'Plástico', 1006, 0105),
+(512, 'Papel', 1007, 0106);
+
+
+create table Sensores (
+idSensor varchar(20) primary key,
+Nivel char(1),
+check (Nivel = 1 or Nivel = 2 or Nivel = 3 or Nivel = 4),
+fkLixeira int,
+foreign key (fkLixeira) references tbLixeira (idLixeira)
+);
+
+insert into Sensores values 
+('SE01', 4, 500),
+('S1', 1, 500),
+('S2', 2, 500),
+('S3', 3, 500),
+('SE02', 4, 501),
+('S4', 1, 501),
+('S5', 2, 501),
+('S6', 3, 501),
+('SE03', 4, 502),
+('S7', 1, 502),
+('S8', 2, 502),
+('S9', 3, 502),
+('SE04', 4, 503),
+('S10', 1, 503),
+('S11', 2, 503),
+('S12', 3, 503),
+('SE05', 4, 504),
+('S13', 1, 504),
+('S14', 2, 504),
+('S15', 3, 504),
+('SE06', 4 , 505),
+('S16', 1, 505),
+('S17', 2, 505),
+('S18', 3, 505),
+('SE07', 4, 506),
+('S19', 1, 506),
+('S20', 2, 506),
+('S21', 3, 506),
+('SE08', 4, 507),
+('S22', 1, 507),
+('S23', 2, 507),
+('S24', 3, 507),
+('SE09', 4, 508),
+('S25', 1, 508),
+('S26', 2, 508),
+('S27', 3, 508),
+('SE10', 4, 509),
+('S28', 1, 509),
+('S29', 2, 509),
+('S30', 3, 509),
+('SE11', 4, 510),
+('S31', 1, 510),
+('S32', 2, 510),
+('S33', 3, 510),
+('SE12', 4, 511),
+('S34', 1, 511),
+('S35', 2, 511),
+('S36', 3, 511),
+('SE13', 4, 512),
+('S37', 1, 512),
+('S38', 2, 512),
+('S39', 3, 512);
+
+
+
+create table MovEntrada(
+fkSensor varchar(20),
+foreign key (fkSensor) references Sensores (idSensor),
 Unidade_Armazenadas int,
 Dia_e_hora datetime
 );
 
-insert into sensorEntrada values 
+insert into MovEntrada values 
 ('SE01', 10, '2020-04-16 20:10:00'),
 ('SE02', 4, '2020-04-12 17:40:00'),
 ('SE03', 9, '2020-04-19 10:15:00'),
@@ -80,14 +176,15 @@ insert into sensorEntrada values
 ('SE12', 21, '2020-04-21 15:40:00'),
 ('SE13', 13, '2020-04-10 18:20:00');
 
-create table SVazio (
-idSensorV varchar(20) primary key,
-movimento char(1),
-check (movimento = 1 or movimento = 0),
-Data_Hora datetime
+create table MovInterno (
+fkSensor varchar(20),
+foreign key (fkSensor) references Sensores (idSensor),
+Movimento char(1),
+check (Movimento = 1 or Movimento = 0),
+Data_hora datetime 
 );
 
-insert into SVazio values 
+insert into MovInterno values 
 ('S1', 1, '2020-04-16 20:10:00'),
 ('S4', 0, '2020-04-12 17:40:00'),
 ('S7', 1, '2020-04-19 10:15:00'), 
@@ -100,16 +197,7 @@ insert into SVazio values
 ('S28', 0, '2020-04-19 16:00:00'),
 ('S31', 1, '2020-04-22 13:00:00'),
 ('S34', 1, '2020-04-21 15:40:00'),
-('S37', 1, '2020-04-10 18:20:00');
-
-create table SMedio (
-idSensorM varchar(20) primary key,
-movimento char(1),
-check (movimento = 1 or movimento = 0),
-Data_Hora datetime
-);
-
-insert into SMedio values 
+('S37', 1, '2020-04-10 18:20:00'),
 ('S2', 1, '2020-04-16 20:10:00'),
 ('S5', 0, '2020-04-12 17:40:00'),
 ('S8', 0, '2020-04-19 10:15:00'), 
@@ -122,16 +210,7 @@ insert into SMedio values
 ('S29', 0, '2020-04-19 16:00:00'),
 ('S32', 1, '2020-04-22 13:00:00'),
 ('S35', 1, '2020-04-21 15:40:00'),
-('S38', 1, '2020-04-10 18:20:00');
-
-create table SCheio (
-idSensorC varchar(20) primary key,
-movimento char(1),
-check (movimento = 1 or movimento = 0),
-Data_Hora datetime
-);
-
-insert into SCheio values 
+('S38', 1, '2020-04-10 18:20:00'),
 ('S3', 0, '2020-04-16 20:10:00'),
 ('S6', 0, '2020-04-12 17:40:00'),
 ('S9', 0, '2020-04-19 10:15:00'), 
@@ -148,45 +227,10 @@ insert into SCheio values
 
 
 
-create table tbLixeira (
-idLixeira int primary key,
-Tipo_da_lixeira varchar(20),
-fkEndereco int,
-foreign key (fkEndereco) references EnderecoLix (idEndereco),
-fkClientes int,
-foreign key (fkClientes) references clientes (idClientes),
-fkEntrada varchar(20),
-foreign key (fkEntrada) references SensorEntrada (idEntrada),
-fkSensorV varchar(20),
-foreign key (fkSensorV) references SVazio (idSensorV),
-fkSensorM varchar(20),
-foreign key (fkSensorM) references SMedio (idSensorM),
-fkSensorC varchar(20),
-foreign key (fkSensorC) references SCheio (idSensorC)
-);
-
-
-insert into tbLixeira values 
-(500, 'Papel', 1000, 0101, 'SE01', 'S1', 'S2', 'S3'),
-(501, 'Plástico', 1001, 0102, 'SE02', 'S4', 'S5', 'S6'),
-(502, 'Orgânico', 1002, 0103, 'SE03', 'S7', 'S8', 'S9'),
-(503, 'Vidro', 1003, 0103, 'SE04', 'S10','S11','S12'),
-(504, 'Papel', 1004, 0104, 'SE05', 'S13','S14','S15'),
-(505, 'Plástico', 1002, 0101, 'SE06', 'S16','S17','S18'),
-(506, 'Metal', 1003, 0102, 'SE07', 'S19','S20','S21'),
-(507, 'Papel', 1004, 0104, 'SE08', 'S22','S23','S24'),
-(508, 'Orgânico', 1005, 0103, 'SE09', 'S25','S26','S27'),
-(509, 'Plástico', 1006, 0105, 'SE10', 'S28','S29','S30'),
-(510, 'Metal', 1007, 0106, 'SE11', 'S31','S32','S33'),
-(511, 'Plástico', 1006, 0105, 'SE12', 'S34','S35','S36'),
-(512, 'Papel', 1007, 0106, 'SE13', 'S37','S38','S39');
-
-
-
 
 select * from clientes;
 
 select * from funcionarios;
 
+select * from sensores;
 
-select * from tbLixeira, sensorEntrada, SVazio, SMedio, SCheio where idEntrada = fkEntrada and idSensorV = fkSensorV and idSensorM = fkSensorM and idSensorC = fkSensorC;
