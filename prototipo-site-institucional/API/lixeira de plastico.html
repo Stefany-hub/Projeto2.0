@@ -1,5 +1,5 @@
 <!doctype html>
-<html>np
+<html>
 
 <head>
 	<title>Line Chart</title>
@@ -13,13 +13,16 @@
 			-webkit-user-select: none;
 			-ms-user-select: none;
 		}
+		.retiradas {
+			opacity: 0;
+		}
 	</style>
 </head>
 
 <body>
 	<section>
-		<h2>Média: <label id='average'>0.00</label></h2>
-		<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
+			<div class="retiradas"><h2>Retiras feitas Hoje: <label id='averageHour'></label></h2></div>
+			<h3>Média de acionamentos por hora: <label id='average'>0.00</label></h3>
 	</section>
 	<section style="width:100%">
 		<canvas id="chart"></canvas>
