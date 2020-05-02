@@ -43,7 +43,9 @@
 							borderWidth: 6,
 							borderColor: 'yellow',
 							backgroundColor: 'transparent',
+							backgroundColor: 'rgba(216, 230, 30, 0.315)',
 
+                        
 
 						}]
 					},
@@ -106,7 +108,7 @@
 
 					listTemp.forEach(data => {
 						//Máximo de 60 itens exibidos no gráfico
-						if (chart.data.labels.length == 30 && chart.data.datasets[0].data.length == 30) {
+						if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
 							chart.data.labels.shift();
 							chart.data.datasets[0].data.shift();
 						}
