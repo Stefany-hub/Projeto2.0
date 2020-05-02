@@ -19,7 +19,7 @@
             <script type="text/javascript" src="https://cdn.userway.org/widget.js"></script>  
     </header>
             
-   <form class="box" action="Cadastro.html"  method="POST" id="formulario">
+   <form class="box"  id="formulario">
 
     <h1>  Cadastro </h1>
     <input size="10" id="nome" type="text" required name=""  placeholder="Nome da empresa"   >
@@ -35,7 +35,7 @@
 <script>
 
 function cadastrar(){
-    if (nome.value != '' && cnpj.value != '' && email.value != '' && estado.value != '' ){
+    if (nome.value != '' && cnpj.value != '' && email.value != '' && senha.value != '' ){
         formulario.innerHTML = `<div class = "formCompleto"><span class="texto">Bem vindo a <span class = "mit">MIT</span>!</span><br><br>
             <p><a href="login.html">Conecte-se agora</a></p></div>
         <div class="logo"><img src="img/MIT.png" alt=""></div>`
