@@ -80,19 +80,19 @@ projeto lixeira novo
  		-IdCliente;
  		-Nome;
  		-CNPJ;
- 		-Valor a pagar;	
+ 	
  		
  		
  2 passo: cliente contrata lixeira:
  	-insere lixeira que vai ter os dados:
  		-IdLixeira;				(PK, INT)
  		-Dono; 		  			(fk)	
- 		-Localização; 				(fk)
+ 		-Localização; 			(fk)
  		-Tipo;					(varchar)
- 		-IdSensor de entrada; 			(fk)
- 		-IdSensor 1; 				(fk)
- 		-IdSensor 2; 				(fk)
- 		-IdSensor 3; 				(fk)
+ 		-IdSensor de entrada; 	(fk)
+ 		-IdSensor 1; 			(fk)
+ 		-IdSensor 2; 			(fk)
+ 		-IdSensor 3; 			(fk)
  		
  		
  3 passo: monitoramento da lixeira:
@@ -101,7 +101,17 @@ projeto lixeira novo
  	acilam de 0 a 1;
  	
  	monitoramento: FRACA 
- 		-IdMonitoramento; (INT) cada lixeira comeca do 1;
+ 		-IdMonitoramento; 	(INT) cada lixeira comeca do 1;
+ 		-IdLxeira; 			(FK,INT)
+ 		-IdEn				(FK, CHAR)
+ 		-StatusEn			(INT)
+ 		-IdS1;				(FK,CHAR)
+ 		-StatusSen			(INT)
+ 		-IdS2;				(FK,CHAR)
+ 		-StatusSen			(INT)
+ 		-IdS3;				(FK,CHAR)
+ 		-StatusSen			(INT)
+ 		-	(INT)
  		
  		
  	 
