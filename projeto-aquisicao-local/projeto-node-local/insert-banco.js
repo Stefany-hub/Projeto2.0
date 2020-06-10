@@ -80,17 +80,16 @@ function iniciar_escuta() {
 
 // função que recebe valores de temperatura e umidade
 // e faz um insert no banco de dados
-function registrar_leitura(temperatura, umidade) {
+function registrar_leitura(presença) {
 
     console.log('\nIniciando inclusão de novo registro...');
-    console.log(`temperatura: ${temperatura}`);
-    console.log(`umidade: ${umidade}`);
+    console.log(`temperatura: ${presença}`);
 
     banco.conectar().then(() => {
 
         return banco.sql.query(`
-        INSERT into leiturax (temperatura, umidade, momento)
-        values (${temperatura}, ${umidade}, CONVERT(Datetime, '${agora()}', 120));
+        INSERT into Statussensor (idMovimentacao, NivelTotal, DataHora, Lixeira_idLixeira)
+        values (${1}, ${1}, CONVERT(Datetime, '${agora()}', ${1}));
         
         delete from leitura where id not in 
         (select top ${registros_mantidos_tabela_leitura} id from leitura order by id desc);`)

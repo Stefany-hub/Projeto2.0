@@ -1,9 +1,9 @@
 const configuracoes = {
     banco: {
-        server: "testexyzwtrtwr.database.windows.net",
-        user: "adminbandtec",
-        password: "b@ndtec2018",
-        database: "gf2018",
+        server: "serverprojetomit.database.windows.net",
+        user: "adminlocal",
+        password: "#GfMIT2.0",
+        database: "bdprojetomit",
         options: {
             encrypt: true
         },
