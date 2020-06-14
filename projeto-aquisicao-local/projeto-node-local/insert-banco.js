@@ -88,8 +88,8 @@ function registrar_leitura(temperatura, umidade) {
     banco.conectar().then(() => {
 
         return banco.sql.query(`
-        INSERT into StatusSensor (idMovimentacao, NivelTotal, DataHora, Lixeira_idLixeira)
-        values ( ${parseInt(temperatura)}, CONVERT(Datetime, '${agora()}', 1));
+        INSERT INTO StatusSensor (idMovimentacao, NivelTotal, DataHora, Lixeira_idLixeira)
+        VALUES ( ${parseInt(temperatura)}, CONVERT(Datetime, '${agora()}', 1));
         
         delete from StatusSensor where idMovimentacao not in 
         (select top ${registros_mantidos_tabela_leitura} idMovimentacao from StatusSensor order by idMovimentacao desc);`)
