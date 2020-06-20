@@ -7,13 +7,12 @@ module.exports = {
     dialect: "sqlite",
     storage: ":memory:"
   },
-  // configuração do meu banco / rota
   production: {
-    username: 'stefany',
-    password: 'urubu100',
-    database: 'site_pluralidade',
-    host: 'localhost',
-    dialect: 'mysql',
+    username: 'adminlocal',
+    password: '#GfMIT2.0',
+    database: 'bdprojetomit',
+    host: 'serverprojetomit.database.windows.net',
+    dialect: 'mssql',
     xuse_env_variable: 'DATABASE_URL',
     dialectOptions: {
       options: {

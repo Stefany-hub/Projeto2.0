@@ -2,8 +2,7 @@ let login_usuario;
 let nome_usuario;
 
 function redirecionar_login() {
-    // rota para outra pagina 
-    window.location.href = 'usuario.html';
+    window.location.href = 'login.html';
 }
 
 function verificar_autenticacao() {

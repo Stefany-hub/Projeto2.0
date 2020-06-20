@@ -12,8 +12,7 @@ router.post('/autenticar', function(req, res, next) {
 	var login = req.body.login; // depois de .body, use o nome (name) do campo em seu formulário de login
 	var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
 	
-	// configuração da minha tabela: select da minha tabela login e os seus atributos 
-	let instrucaoSql = `select * from login where usuario='${login}' and senha='${senha}'`;
+	let instrucaoSql = `select * from Cliente where Usuario='${login}' and Senha='${senha}'`;
 	console.log(instrucaoSql);
 
 	sequelize.query(instrucaoSql, {
@@ -22,7 +21,7 @@ router.post('/autenticar', function(req, res, next) {
 		console.log(`Encontrados: ${resultado.length}`);
 
 		if (resultado.length == 1) {
-			sessoes.push(resultado[0].dataValues.usuario);
+			sessoes.push(resultado[0].dataValues.Usuario);
 			console.log('sessoes: ',sessoes);
 			res.json(resultado[0]);
 		} else if (resultado.length == 0) {
