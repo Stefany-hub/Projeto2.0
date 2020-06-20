@@ -1,0 +1,79 @@
+/* defini o corpo com os valores do espaçamento foro do conteúdo e espaçamento dentro dos limetes do conteúdo */
+
+body
+{
+margin: 0;
+padding: 0;
+background: aliceblue;
+}
+body h4 a{
+  /* tira o sublinhado do link */
+text-decoration: none;
+color: #1E90FF;
+position: relative;
+top: 400px;
+margin-left: 1230px;
+}
+body #logo{
+  height: 83px;
+   top: -1px;
+   position: relative;
+   margin-left: 18px;
+     }  
+.header{
+  height: 50px;
+   width: 100%;
+   background-color: #4682B4;
+     }
+.content p
+{
+  margin-left: 28px;
+  position: relative;
+}
+.content h1
+{
+  margin-left: 28px;
+  position: relative;
+}
+
+section{
+position: absolute;
+top: 50%;
+left:50%;
+/* manipula os dados dando um tamanho e altura */
+transform: translate(-50%,-50%);
+height: 400px;
+width: 1200px;
+background: #000;
+/* box-shadow sombra */
+box-shadow: 0 25px 30px rgba(0, 0, 0,.5);
+
+/* alinha um intém um do lado do outro */
+display: flex;
+}
+
+.content{
+width: calc(50% - 50px );
+height: 100%;
+background: #000;
+/* inclui o tamanho do tamanho e altura do padding, mas não o margin */
+box-sizing: border-box;
+padding: 30px;
+font-family: sans-serif;
+color: white;
+}
+
+
+.imageBox{
+    
+    height: 100%;
+    /* inclui o tamanho do tamanho e altura do padding, mas não o margin */
+    box-sizing: border-box;
+    /* facilita a manipulação */
+    border-left: 100px solid #000;
+    background-position:-443px -53px;
+    }
+    
+
+
+    

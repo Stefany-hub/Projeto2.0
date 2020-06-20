@@ -80,17 +80,16 @@ function iniciar_escuta() {
 
 // função que recebe valores de temperatura e umidade
 // e faz um insert no banco de dados
-function registrar_leitura(temperatura, umidade) {
-    let i = 1;
+function registrar_leitura(movimentacao) {
     console.log('\nIniciando inclusão de novo registro...');
-    console.log(`temperatura: ${temperatura}`);
-    console.log(`umidade: ${umidade}`);
+    console.log(`Mov: ${movimentacao}`);
+    
 
     banco.conectar().then(() => {
 
         return banco.sql.query(`
-        INSERT into StatusSensor (idMovimentacao, NivelTotal, DataHora, Lixeira_idLixeira)
-        values (${i++}, ${parseInt(temperatura)}, CONVERT(Datetime, '${agora()}', 1));
+        INSERT into StatusSensor (NivelTotal, DataHora)
+        VALUES ( ${parseInt(movimentacao)}, '${agora()}');
         
         delete from StatusSensor where idMovimentacao not in 
         (select top ${registros_mantidos_tabela_leitura} idMovimentacao from StatusSensor order by idMovimentacao desc);`)
@@ -121,7 +120,7 @@ if (gerar_dados_aleatorios) {
 	// dados aleatórios
 	setInterval(function() {
 		console.log('Gerando valores aleatórios!');
-		registrar_leitura(Math.min(Math.random()*100, 60), Math.min(Math.random()*200, 100))
+		registrar_leitura((Math.min(Math.random()* 3)).toFixed(0))
 	}, intervalo_geracao_aleatoria_segundos * 1000);
 } else {
 	// iniciando a "escuta" de dispositivos Arduino.

@@ -7,12 +7,13 @@ module.exports = {
     dialect: "sqlite",
     storage: ":memory:"
   },
+  // configuração do meu banco / rota
   production: {
-    username: 'adminbandtec',
-    password: 'b@ndtec2018',
-    database: 'gf2018',
-    host: 'testexyzwtrtwr.database.windows.net',
-    dialect: 'mssql',
+    username: 'stefany',
+    password: 'urubu100',
+    database: 'site_pluralidade',
+    host: 'localhost',
+    dialect: 'mysql',
     xuse_env_variable: 'DATABASE_URL',
     dialectOptions: {
       options: {
