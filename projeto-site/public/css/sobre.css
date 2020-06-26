@@ -59,6 +59,7 @@ float: left;
 }
 /* header final */
 
+
 /* linha do tempo inicio */
 
 .linhaTempo{
@@ -67,13 +68,83 @@ float: left;
     padding: 12.61% 0px;
     width: 80%;
 }
+
+.bolinha-branca1 {
+    width: 5px;
+    height: 5px;
+    bottom: 0.5px;
+    right: 99px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+.bolinha-branca2 {
+    width: 5px;
+    height: 5px;
+    bottom: 0.5px;
+    right: 129px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+.bolinha-branca3 {
+    width: 5px;
+    height: 5px;
+    bottom: 0.5px;
+    right: 155px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+.bolinha-branca4 {
+    width: 5px;
+    height: 5px;
+    bottom: 0.5px;
+    right: 75px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+.div_linha1 {
+    width: 25%;
+    height: 5px;
+    background-color: chocolate;
+    top: 145px;
+    position: absolute;
+}
+.div_linha2 {
+    width: 27%;
+    height: 5px;
+    background-color: rgb(97, 238, 97);
+    top: 145px;
+    left: 205px;
+    position: absolute;
+}
+.div_linha3 {
+    width: 33%;
+    height: 5px;
+    background-color: rgb(56, 1, 22);
+    top: 145px;
+    right: 161px;
+    position: absolute;
+}
+.div_linha4 {
+    width: 18.5%;
+    height: 5px;
+    background-color: rgb(0, 48, 121);
+    top: 145px;
+    right: 0px;
+    position: absolute;
+}
+
 .linhaTempo::before{
     content: '';
     position: absolute;
     right: 0;
     width: 100%;
     height: 5px;
-    background-color: red;
+    background-color: #6d6b6b
 }
 
 .linhaTempo ul li{
@@ -91,44 +162,57 @@ float: left;
 
 .linhaTempo .icones{
     position: absolute;
-    background-color: red;
+    /* background-color: red; */
     height: 80px;
     width: 80px;
     border-radius: 50%;
+    color: white;
+}
+
+.linhaTempo .icones img {
+    color: white;
 }
 
 .icone1{
     margin-left: 54px;
     top: 20px;
+    background-color: chocolate
 }
 .icone1::before{
-    top: 79px;
+    top: 73.5px;
     height: 51px;
+    background-color: chocolate;
 }
 .icone2{
     margin-left: 104px;
     top: 205px;
+    background-color: rgb(97, 238, 97);
 }
 .icone2::before{
-    top: -60px;
+    top: -54.8px;
     height: 61px;
+    background-color: rgb(97, 238, 97);
 }
 .icone3{
     margin-left: 143px;
     top: 20px;
+    background-color: rgb(56, 1, 22);
 }
 .icone3::before{
-    top: 79px;
+    top: 73.5px;
     height: 51px;
+    background-color: rgb(56, 1, 22);
 
 }
 .icone4{
     margin-left: 55px;
     top: 205px;
+    background-color: rgb(0, 48, 121);
 }
 .icone4::before{
-    top: -60px;
+    top: -54.8px;
     height: 61px;
+    background-color: rgb(0, 48, 121);
 }
 
 
@@ -138,25 +222,35 @@ float: left;
     position: absolute;
     right: 36px;
     width: 7px;
-    background-color: red;
+    /* background-color: red; */
 }
 
-.linhaTempo h1{
 
-}
-
-.linhaTempo h3{
-
-}
-
-.linhaTempo .text1, .linhaTempo .text3{
-
-}
 
 .linhaTempo .text2, .linhaTempo .text4{
     position: relative;
     top: -101px
 }
+
+.text1 h1 {
+    color: chocolate;
+}
+
+.text2 h1 {
+    color: rgb(97, 238, 97);
+}
+
+.text3 h1 {
+    color: rgb(56, 1, 22);;
+}
+
+.text4 h1 {
+    color: rgb(0, 48, 121);;
+}
+
+/* .text1, .text2, .text3, .text4 h3 {
+    color: #707070;
+} */
 
 .linhaTempo .text2{
     margin-left: 34px;
