@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image:url('E:/HTML-CSS/site mit/prototipo-site-institucional/img/fundoo.JPEG');
+    background-image:url('../img/fundoo.JPEG');
     }
     
 .box{
@@ -24,7 +24,7 @@ text-transform: uppercase;
 font-weight: 600;
 }
     
-.box input[type = "email"] ,.box input[type = "password"]{
+.box input[type = "text"] ,.box input[type = "password"]{
 border: 0;
 background: white;
 display: block;
@@ -45,7 +45,7 @@ width: 280px;
 border-color: #2ecc71;
 }
 
-.box button[type = "submit"]{
+.box button{
     border: 0;
     background: none;
     display: block;

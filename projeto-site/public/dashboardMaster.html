@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashStyle.css">
+</head>
+
+<body>
+
+    <div id="mitTexto">
+        <a href="index.html">MIT</a>
+    </div>
+
+    <nav class="nav">
+
+        <h3>DASHBOARD</h3>
+        <hr>
+        <ul>
+            <i class="fas fa-chart-pie icon"></i>
+            <li><a href="dashboardMaster.html">DASHBOARD</a></li>
+            <i class="fas fa-user icon"></i>
+            <li><a href="perfilDoCliente.html">PERFIL DO CLIENTE</a></li>
+            <i class="fas fa-phone-volume icon"></i>
+            <li><a href="index.html#contato">SUPORTE</a></li>
+        </ul>
+
+    </nav>
+
+    
+    <div id="mapa">
+        <div class="areaMapa" id="areaMapa">
+            <img src="./img/iconLoc.png" onclick="troca()">
+            <img class="icone2" src="./img/iconLoc.png" onclick="troca2()">
+        </div>
+        <div class="areaDash" id="areaDash">
+            <span class="btnVoltar" onclick="voltar()"><h1>«</h1></span>
+            <div class="grafico1">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="canvas1" style="height: 100%; width: 100%"></canvas>
+                </div>
+            </div>
+            <div class="grafico2">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+            <div class="grafico3">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="areaDash2" id="areaDash2">
+            <span class="btnVoltar2" onclick="voltar2()"><h1>«</h1></span>
+            <div class="grafico1">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="canvasD2" style="height: 100%; width: 100%"></canvas>
+                </div>
+            </div>
+            <div class="grafico2">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="myChart2D2"></canvas>
+                </div>
+            </div>
+            <div class="grafico3">
+                <div style="width:100%; height: 100%;">
+                    <canvas id="myChartD2"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/cb80613395.js" crossorigin="anonymous"></script>
+<script src="js/trocaPainel.js"></script>
+
+<!-- graficos do dash 1 -->
+<script src="js/grafico1.js"></script>
+<script src="js/grafico3.js"></script>
+<script src="js/grafico2.js"></script>
+<!-- final dos gráficos do dash 1 -->
+
+<!-- gráficos dos dash 2 -->
+<!-- <script src="js/grafico1D2.js"></script> -->
+<script src="js/grafico3D2.js"></script>
+<script src="js/grafico2D2.js"></script>
+<!-- final dos gráficos do dash 2 -->

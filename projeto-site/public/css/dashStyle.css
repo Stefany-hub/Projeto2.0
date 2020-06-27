@@ -1,0 +1,347 @@
+
+body{
+    font-family: 'sans-serif',Poppins;
+    background-color: rgb(237, 249, 243);
+    }
+.nav{
+    
+    padding: 1px;
+     color: white;
+      background-color: #11cdef;
+      height: 82vh;
+      width: 16vw;
+      position: absolute;
+      border-radius: 7px;
+     margin-top:80px;
+     margin-left: 15px;
+
+}
+.nav  a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 0;
+   
+  
+}
+
+/* inicio do mapa */
+
+#mapa {
+
+    position: absolute;
+    padding: 1px;
+    background-color: white;
+    height: 538px;
+    width: 75%;
+    border-radius: 7px; 
+    margin-left: 20%;
+    margin-top: 6%;    
+    box-shadow: 0px 0px 18px 0px grey;
+    overflow: hidden;
+
+}
+
+.areaMapa{
+    background-image: url(../img/mapa.png);
+    background-position: center;
+    background-size: 160%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@keyframes trocarMapa{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 1030px;
+    }
+}
+@keyframes voltarMapa{
+    0%{
+        right: 1030px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes trocarMapa2{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: -1030px;
+    }
+}
+@keyframes voltarMapa2{
+    0%{
+        right: -1030px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+
+#mapa img{
+
+    position: relative;
+    top: 65px;
+    left: 170px;
+    height: 50px;
+    cursor: pointer;
+
+}
+#mapa .icone2{
+
+    position: relative;
+    top: 65px;
+    left: 230px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+/* Primeiro dash */
+.areaDash{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #11cdef;
+    right: -1030px;
+    margin-top: -1px;
+}
+
+@keyframes trocarDash{
+    0%{
+        right: -1030px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes voltarDash{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: -1030px;
+    }
+}
+
+.btnVoltar{
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px grey;
+}
+
+.btnVoltar:active{
+    margin-top: 17px;
+}
+
+.btnVoltar h1{
+    margin-top: -2px;
+    margin-right: 3px;
+}
+
+/* final do primeiro dash */
+
+
+/* segundo dash */
+
+.areaDash2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #11cdef;
+    right: 1030px;
+    margin-top: -1px;
+}
+
+@keyframes trocarDash2{
+    0%{
+        right: 1030px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes voltarDash2{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: 1030px;
+    }
+}
+
+.btnVoltar2{
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    text-align: center;
+    border-radius: 50%;
+    height: 40px;
+    margin-left: 969px;
+    margin-top: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 0px grey;
+    transform: rotateZ(180deg);
+}
+
+.btnVoltar2:active{
+    margin-top: 17px;
+}
+
+.btnVoltar2 h1{
+    margin-top: -2px;
+    margin-right: 3px;
+}
+
+/* final do segundo dash */
+.grafico1{
+    height: 40%;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px grey;
+}
+.grafico2{
+    height: 40%;
+    width: 40%;
+    background-color: white;
+    margin-right: 7.5%;
+    margin-top: 3%;
+    border-radius: 10px;
+    float: right;
+    box-shadow: 0px 0px 15px 0px grey;
+}
+.grafico3{
+    height: 40%;
+    width: 40%;
+    background-color: white;
+    margin-left: 7.5%;
+    margin-top: 3%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px grey;
+}
+
+
+
+/* final do mapa */
+
+
+.nav ul li{
+    list-style: none; 
+    margin:30px 0; 
+}
+/* .nav ul li:hover{
+    border-bottom: 2px solid white;
+} */
+
+.nav h3{
+  padding: 10px;
+  margin-left: 35px;
+}
+.nav .icon{
+position: absolute;
+margin-left: -29px;
+}
+
+.nav hr{
+width: 89%;
+margin-top: -12px;
+}
+
+#mitTexto{   
+     position: absolute;
+     width: 98vw; 
+     margin-top: 30px;
+
+}
+
+#mitTexto a{
+   text-decoration: none;
+    font-size: 35px;
+    margin-left: 90px;
+    color:#32325d ;
+
+}
+
+/* perfil do cliente */
+#mapa_perfil {
+
+    position: absolute;
+    padding: 1px;
+    background-color: white;
+    height: 516px;
+    width: 48%;
+    border-radius: 7px; 
+    margin-left: 20%;
+     margin-top: 6%;  
+     padding: 15px;   
+     color: #6767a7;
+     
+
+}
+
+#mapa_perfil2{
+
+    position: absolute;
+    padding: 1px;
+    background-color: white;
+    height: 400px;
+    width: 24%;
+    border-radius: 7px; 
+    margin-left: 73%;
+     margin-top: 6%; 
+     background: linear-gradient(#A3E4D7,#11cdef);
+     text-align: center;
+     color: white;
+
+}
+
+#mapa_perfil2 .icon{
+ 
+  color: white;
+  font-size: 70px;
+  border-radius: 50%;
+  
+}
+#mapa_perfil h3{
+color:#32325d ;
+margin-left: 100px;
+
+}
+#mapa_perfil h4{
+    margin-left: 100px;
+   
+  }
+
+#perfil{
+    width: 50%;
+    padding: 5px;
+    position: absolute;
+}
+
+input{
+    padding: 0 10px;
+    font-size: 15px;
+    height: 33px;
+    width: 50%;
+    outline: none;
+    margin-left: 100px;
+}
+
+
+
+
