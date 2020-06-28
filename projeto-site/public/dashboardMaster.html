@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/dashStyle.css">
 </head>
 
-<body onload="verificar()">
+<body>
 
     <div id="mitTexto">
         <a href="index.html">MIT</a>
@@ -39,7 +39,10 @@
     
     <div id="mapa">
         <div class="areaMapa" id="areaMapa">
-            <img src="./img/iconLoc.png" onclick="troca()">
+            <img src="./img/iconLoc.png" onclick="troca()" onmouseover="aparecer()" onmouseout="sumir()">
+            <div class="descricao" id="desc">
+                <h4>Colepav</h4> <hr> <h5>Lixeira: Metal<br>Localização: Estr. Dr. Yojiro Takaoka, 100</h5>
+            </div>
             <img class="icone2" src="./img/iconLoc.png" onclick="troca2()">
         </div>
         <div class="areaDash" id="areaDash">
@@ -86,20 +89,7 @@
 <script src="https://kit.fontawesome.com/cb80613395.js" crossorigin="anonymous"></script>
 <script src="js/trocaPainel.js"></script>
 
-<script>
-
-function logoff() {
-    sessionStorage.clear()
-    window.location.href = 'index.html'
-}
-
-function verificar(){
-    let tent = sessionStorage.getItem('login_usuario_meuapp');
-    if(!tent){
-      window.location.href = 'login.html'   
-    }
-}
-</script>
+<script src="js/funçõesDash.js"></script>
 
 <!-- graficos do dash 1 -->
 <script src="js/grafico1.js"></script>

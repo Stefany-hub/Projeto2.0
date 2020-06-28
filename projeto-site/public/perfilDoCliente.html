@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="dashStyle.css">
+    <link rel="stylesheet" href="css/dashStyle.css">
 </head>
 
 <body>
@@ -30,9 +30,9 @@
 
     <div id="mapa_perfil">
         <div id="perfil"></div>
-        <h3>  Perfil </h3>
-       <h4>Empresa</h4> 
-      <input disabled placeholder="Colepav" >
+        <h3> Perfil </h3>
+        <h4>Empresa</h4>
+        <input disabled placeholder="Colepav">
         <h4> Endereço </h4>
         <input disabled placeholder="Estr. Dr. Yojiro Takaoka, 100 - Itaqui, Barueri - SP, 06428-000">
         <h4>País / Estado</h4>
@@ -40,22 +40,22 @@
         <h4>Email</h4>
         <input disabled placeholder="Colepav@gmail.com">
         <h4> Senha</h4>
-       <input disabled placeholder="**********">
-     
+        <input disabled placeholder="**********">
+
 
     </div>
     </div>
 
     <div id="mapa_perfil2">
-        <i class="fas fa-users icon"></i> 
+        <i class="fas fa-users icon"></i>
         <h3>Colepav</h3>
         <p> Através de um plano de gerenciamento integrado e único para cada cliente,
-             a COLEPAV apresenta sempre as melhores soluções em transporte e destinação final,
-              adequando o melhor equipamento para cada tipo de resíduo,
-               bem como a destinação de menor impacto ambiental e de menor custo.</p>
-              <i class="fab fa-facebook"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="far fa-envelope"></i>
+            a COLEPAV apresenta sempre as melhores soluções em transporte e destinação final,
+            adequando o melhor equipamento para cada tipo de resíduo,
+            bem como a destinação de menor impacto ambiental e de menor custo.</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="far fa-envelope"></i>
 
 
     </div>
@@ -64,3 +64,24 @@
 
 </html>
 <script src="https://kit.fontawesome.com/cb80613395.js" crossorigin="anonymous"></script>
+<script>
+
+    verificar();
+
+    function logoff() {
+        sessionStorage.clear()
+        window.location.href = 'index.html'
+    }
+
+    function verificar() {
+        let tent = sessionStorage.getItem('login_usuario_meuapp');
+        if (!tent) {
+            window.location.href = 'login.html'
+        }
+        else
+        {
+            window.location.href = 'dashboardMaster.html'
+        }
+    }
+
+</script>

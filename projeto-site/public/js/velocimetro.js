@@ -44,7 +44,7 @@ window.feed = function(callback) {
       aperture: 180,
       minValue: 0,
       maxValue: 100,
-      step: 10,
+      step: 25,
       center: {
         visible: false
       },
@@ -58,7 +58,7 @@ window.feed = function(callback) {
           offsetX: 15
         }]
       },
-      labels: ['0','10','20','30','40','50','60','70','80','90','100'],
+      labels: ['0','25','50','75','100'],
       ring: {
         size: 25,
         rules: [{
@@ -84,7 +84,7 @@ window.feed = function(callback) {
       type: "feed",
       transport: "js",
       url: "feed()",
-      interval: 1500,
+      interval: 1000,
       resetTimeout: 1000
     },
     series: [{
