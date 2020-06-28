@@ -19,7 +19,7 @@
             options: {
                 legend: {
                     display: true,
-                    position: 'left'
+                    position: 'left',
                 },
                 circumference: 2 * Math.PI,
                 rotation: 2 * Math.PI,

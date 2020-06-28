@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashStyle.css">
 </head>
 
-<body>
+<body onload="verificar()">
 
     <div id="mitTexto">
         <a href="index.html">MIT</a>
@@ -26,10 +27,15 @@
             <li><a href="perfilDoCliente.html">PERFIL DO CLIENTE</a></li>
             <i class="fas fa-phone-volume icon"></i>
             <li><a href="index.html#contato">SUPORTE</a></li>
+            <i class="fas fa-sign-out-alt icon"></i>
+            <li onclick="logoff()"><a>SAIR</a></li>
         </ul>
 
     </nav>
 
+    <div class="alerta" id="alerta">
+        <h3>Recolha o Lixo. <br> Sua Smart-Trash está 75% preenchida</h3>
+    </div>
     
     <div id="mapa">
         <div class="areaMapa" id="areaMapa">
@@ -45,12 +51,12 @@
             </div>
             <div class="grafico2">
                 <div style="width:100%; height: 100%;">
-                    <canvas id="myChart2"></canvas>
+                    <div id='myChart'></div>
                 </div>
             </div>
             <div class="grafico3">
                 <div style="width:100%; height: 100%;">
-                    <canvas id="myChart"></canvas>
+                    <canvas id="myChart1"></canvas>
                 </div>
             </div>
         </div>
@@ -80,14 +86,30 @@
 <script src="https://kit.fontawesome.com/cb80613395.js" crossorigin="anonymous"></script>
 <script src="js/trocaPainel.js"></script>
 
+<script>
+
+function logoff() {
+    sessionStorage.clear()
+    window.location.href = 'index.html'
+}
+
+function verificar(){
+    let tent = sessionStorage.getItem('login_usuario_meuapp');
+    if(!tent){
+      window.location.href = 'login.html'   
+    }
+}
+</script>
+
 <!-- graficos do dash 1 -->
 <script src="js/grafico1.js"></script>
 <script src="js/grafico3.js"></script>
-<script src="js/grafico2.js"></script>
+<!-- <script src="js/grafico2.js"></script> -->
+<script src="js/velocimetro.js"></script>
 <!-- final dos gráficos do dash 1 -->
 
 <!-- gráficos dos dash 2 -->
-<!-- <script src="js/grafico1D2.js"></script> -->
+<script src="js/grafico1D2.js"></script>
 <script src="js/grafico3D2.js"></script>
 <script src="js/grafico2D2.js"></script>
 <!-- final dos gráficos do dash 2 -->

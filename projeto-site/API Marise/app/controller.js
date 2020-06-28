@@ -162,4 +162,4 @@ const registros_mantidos_tabela_leitura = 8;
 });
 });
 
-module.exports = router, Switch;
+module.exports = router;
