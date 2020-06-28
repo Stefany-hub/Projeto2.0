@@ -71,7 +71,7 @@ window.feed = function(callback) {
           },
           {
             rule: '%v >= 50 && %v < 75',
-            backgroundColor: 'orange'
+            backgroundColor: 'yellow'
           },
           {
             rule: '%v >= 75',

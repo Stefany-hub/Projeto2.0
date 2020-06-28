@@ -13,11 +13,17 @@ function verificar(){
 }
 
 function alert(){
-    if(count > 75){
-        alerta.style.display = 'block'
+    if(count <= 50){
+        alerta.style.backgroundColor = 'green';
+        alerta.innerHTML = `<h3>Capacidade Mínima. <br> Sua Smart-Trash está entre 0% e 25% preenchida</h3>`;
     }
-    else{
-        alerta.style.display = 'none'
+    else if (count > 50 && count <= 75){
+        alerta.style.backgroundColor = 'yellow';
+        alerta.innerHTML = `<h3>Capacidade Média. <br> Sua Smart-Trash está estre 50% e 75% preenchida</h3>`;
+    }
+    else if (count > 75){
+        alerta.style.backgroundColor = 'red';
+        alerta.innerHTML = `<h3>Capacidade Máxima. <br> Sua Smart-Trash está acima de 75% preenchida</h3>`;
     }
 }
 

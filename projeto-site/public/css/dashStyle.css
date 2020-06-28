@@ -28,7 +28,7 @@ body{
 /* alerta */
 
 .alerta{
-    height: 76px;
+    height: 80px;
     width: 350px;
     position: absolute;
     background: red;
@@ -41,7 +41,7 @@ body{
 
 .alerta h3{
     margin-left: 17px;
-    margin-top: 13px;
+    margin-top: 9px;
 }
 
 @keyframes piscar{
