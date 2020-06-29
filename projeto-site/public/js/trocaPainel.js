@@ -2,6 +2,9 @@ function troca(){
         areaMapa.style.animation = 'trocarMapa 1s linear 1';
         areaDash.style.animation = 'trocarDash 1s linear 1';
         setTimeout(() => {
+            alerta.style.display = 'block' 
+        }, 1500);
+        setTimeout(() => {
             areaMapa.style.right = '1030px';
             areaDash.style.right = '0px';
         }, 900);
@@ -10,6 +13,7 @@ function troca(){
 function voltar(){
     areaMapa.style.animation = 'voltarMapa 1s linear 1';
     areaDash.style.animation = 'voltarDash 1s linear 1';
+    alerta.style.display = 'none'
     setTimeout(() => {
         areaMapa.style.right = '0px';
         areaDash.style.right = '-1030px';
