@@ -25,6 +25,8 @@
             <li><a href="perfilDoCliente.html">PERFIL DO CLIENTE</a></li>
             <i class="fas fa-phone-volume icon"></i>
             <li><a href="index.html#contato">SUPORTE</a></li>
+            <i class="fas fa-sign-out-alt icon"></i>
+            <li onclick="logoff()"><a>SAIR</a></li>
         </ul>
     </nav>
 
@@ -77,10 +79,6 @@
         let tent = sessionStorage.getItem('login_usuario_meuapp');
         if (!tent) {
             window.location.href = 'login.html'
-        }
-        else
-        {
-            window.location.href = 'dashboardMaster.html'
         }
     }
 

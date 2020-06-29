@@ -42,9 +42,7 @@ window.feed = function(callback) {
     },
     scaleR: {
       aperture: 180,
-      minValue: 0,
-      maxValue: 100,
-      step: 25,
+      values: "0:100:25",
       center: {
         visible: false
       },
@@ -62,7 +60,7 @@ window.feed = function(callback) {
       ring: {
         size: 25,
         rules: [{
-            rule: '%v <= 25',
+            rule: '%v >= 0 && %v <= 25',
             backgroundColor: 'green'
           },
           {
@@ -90,7 +88,8 @@ window.feed = function(callback) {
     series: [{
       values: [0], // starting value
       backgroundColor: 'black',
-      indicator: [10, 10, 10, 10, 0.75],
+      indicator: [10,0,0,0,0.7],
+
       animation: {
         effect: 2,
         method: 1,

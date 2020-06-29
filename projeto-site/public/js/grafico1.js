@@ -6,10 +6,10 @@ var acion = new Chart(ctx, {
 	data: {
 		labels: [],
 		datasets: [{
-			label: 'Acionamentos',
+			label: 'Entradas',
 			steppedLine: true,
-			backgroundColor: "rgba(0, 209, 0, 0.237)",
-			borderColor: "green",
+			backgroundColor: "rgba(128, 229, 247, 0.219)",
+			borderColor: "#11cdef",
 			data: [],
 		}]
 	},
